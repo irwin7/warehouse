@@ -1,0 +1,216 @@
+.navbar{
+  background-color: $color-105;
+  border-bottom: 1px solid $color-border;
+  width: 100%;
+  @include mp;
+
+  .container{
+    padding: 0 15px;
+    width: 100%;
+  }
+}
+.site-navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 35px 0;
+  width: 100%;
+
+		&__logo-link {
+      display: inline-block;
+      min-width: 176px;
+      margin-right: 10px;
+		}
+
+		&__form {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      max-width: 600px;
+      width: 100%;
+      padding-left: 20px;
+      padding-right: 15px;
+      height: 42px;
+      background-color: $white;
+      border-radius: 40px;
+      margin-right: 10px;
+		}
+
+		&__input {
+      width: 98%;
+      background-color: transparent;
+      border: none;
+      padding: 0;
+
+      &::placeholder{
+        font-size: 12px;
+      }
+		}
+
+		&__submit-btn {
+      background-color: transparent;
+      border: none;
+      color: $color-157;
+      font-size: 18px;
+      padding: 0;
+		}
+
+    &__options{
+      display: flex;
+      align-items: center;
+    }
+
+    &__option{
+      display: inline-block;
+      background-color: transparent;
+      border: none;
+      // font-size: 28px;
+      color: $white;
+      padding: 0;
+      width: 22px;
+      height: 22px;
+
+      
+      i{
+        font-size: 22px;
+        width: 22px;
+        height: 22px;
+      }
+      &:not(:last-child){
+        margin-right: 10px;
+      }
+    }
+}
+.bask{
+  position: relative;
+}
+.bask::before{
+  content: "0";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #fd6666;
+  border-radius: 50%;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 11px;
+  font-family: $font-roboto;
+  color: #fff;
+  font-weight: 700;
+}
+.navig {
+  background-color: $color-0c5;
+}
+.site-nav {
+
+		&__list {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      @include mp;
+		}
+
+		&__item {
+      padding: 20px;
+		}
+
+    &__link{
+      font-family: $font-poppins;
+      font-size: 12px;
+      line-height: 20px;
+      color: $white;
+      font-weight: 500;
+      text-transform: uppercase;
+      position: relative;
+    }
+}
+.offcanvas-header{
+    display: flex;
+    justify-content: center !important;
+}
+.btn-close{
+  background: url("../../img/x-lg.svg");
+  width: 16px;
+  height: 16px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  opacity: 1;
+}
+.offcanvas-body{
+
+  .site-nav__list{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .site-nav__item{
+    width: 100%;
+    border-bottom: 1px dashed #999;
+  }
+  .site-nav__link{
+    color: #999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+@media only screen and (max-width:768px) {
+  .navbar{
+    background-color: $white;
+    border-bottom-color: transparent;
+  }
+  .bask::before{
+    width: 16px;
+    height: 16px;
+    top: 0;
+    left: 70%;
+  }
+  .site-navbar{
+    padding: 10px 0;
+
+    .menu{
+      color: #222;
+      padding: 0;
+    }
+    &__submit-btn{
+      color: #222;
+    }
+    &__form{
+      background-color: #f2f2f2;
+      height: 34px;
+    }
+    &__logo-link{
+      min-width: 50px;
+      max-width: 150px;
+    }
+    &__options{
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      background-color: $white;
+      box-shadow: 0 -2px 5px -2px rgb(0, 0, 0 / 20%);
+      justify-content: center;
+    }
+
+    &__option{
+      color: #222;
+      max-width: 70px;
+      width: 100%;
+      height: 37px;
+
+      &:not(:last-child){
+        margin-right: 0;
+      }
+    }
+  
+  }
+  .site-nav{
+    display: none;
+  }
+}
