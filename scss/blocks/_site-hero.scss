@@ -1,0 +1,192 @@
+
+.carousel {
+
+
+  &__item{
+    background-color: #f8f8f8;
+    z-index: 5;
+    position: relative;
+    padding: 0 70px;
+    min-width: 100%;
+    height: 768px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-image: url("https://cdn.shopify.com/s/files/1/0272/1493/8165/files/slider-show-3_35382bde-054c-4c31-a610-76b28ce97330_2048x.jpg?v=1601621098");
+  
+    &:nth-child(2){
+      background-image: url("https://cdn.shopify.com/s/files/1/0272/1493/8165/files/slider-show-1_66ffbc40-efeb-48a4-95d8-590eba9597fd_2048x.jpg?v=1601620725");
+    }
+    &:nth-child(3){
+      background-image: url("https://cdn.shopify.com/s/files/1/0272/1493/8165/files/slider-show-2_341dac96-3ed1-4ce8-8343-daa4c6d8b224_2048x.jpg?v=1601621068");
+    }
+  }
+
+  &__price {
+    font-family: $font-poppins;
+    font-weight: 900;
+    color: $color-147;
+    font-size: 30px;
+    padding: 0 15px 7px;
+    text-transform: capitalize;
+    display: inline-block;
+  }
+
+  &__title {
+    color: $black;
+    font-family: $font-poppins;
+    font-size: 38px;
+    padding: 0 15px 23px;
+    text-transform: uppercase;
+    font-weight: 900;
+    line-height: 50px;
+  }
+
+  &__des {
+    color: $color-42;
+    font-size: 13px;
+    padding: 0 15px;
+    font-weight: 400;
+    margin-bottom: 53px;
+    font-family: $font-poppins;
+    text-transform: none;
+    line-height: 22px;
+  }
+
+  &__btn-blue{
+    margin-left: 15px;
+    i{
+      margin-right: 10px;
+    }
+  }
+
+  &__btn{
+    position: absolute;
+    opacity: 1;
+    z-index: 1;
+    width: auto;
+    span{
+      background-color: #adadad;
+      // position: absolute;
+      width: 60px;
+      height: 80px;
+      background-size: 26px 37px;
+      opacity:1;
+      z-index: 6;
+      transition: all 0.4s ease;
+
+      &:hover{
+        background-color: #444343;
+      }
+    }
+  }
+
+  &__control-next-icon {
+    right: 0;
+  }
+
+  &__control-prev-icon{
+    left: 0;
+  }
+}
+.macs{
+  background-color: #efefef;
+}
+.macs .carousel__item-inner{
+  max-width: 500px;
+  position: relative;
+  top: 50px;
+}
+.phone{
+  text-align: center;
+
+  .carousel__item-inner{
+    position: relative;
+    top: 50px;
+    max-width: 650px;
+    margin: 0 auto;
+  }
+  .carousel__price{
+    color: $color-da4;
+  }
+  .carousel__title{
+    padding: 0 15px 7px;
+    margin: 0;
+  }
+  .carousel__des{
+    font-weight: 300;
+    line-height: 30px;
+    margin-bottom: 35px;
+    font-size: 18px;
+  }
+}
+.mac{
+  text-align: center;
+
+  .carousel__item-inner{
+    position: relative;
+    top: 50px;
+    max-width: 650px;
+    margin: 0 auto;
+  }
+  .carousel__title{
+    padding: 0 15px 7px;
+    margin: 0;
+  }
+  .carousel__des{
+    font-weight: 300;
+    line-height: 30px;
+    margin-bottom: 35px;
+    font-size: 18px;
+  }
+}
+@media only screen and (max-width : 992px) {
+  .carousel{
+    &__item{
+      min-height: 400px;
+      max-height: 400px;
+    }
+  }
+}
+@media only screen and (max-width : 768px) {
+  .carousel{
+
+    &__btn{
+      width: 15%;
+      span{
+        visibility: hidden;
+      }
+    }
+    &__item{
+      padding: 0;
+      max-height: 300px;
+      background-size: contain;
+    }
+  }
+}
+@media only screen and (max-width : 580px) {
+  .carousel{
+    &__item{
+      min-height: 200px;
+      max-height: 200px;
+      background-size: 100%;
+    }
+    &__item-inner{
+      display: none;
+    }
+  }
+}
+#hover-produc{
+  padding: 20px 0;
+}
+.hover-produc__item{
+  @include card-hover;
+}
+@media only screen and (max-width : 370px) {
+  .carousel{
+    &__item{
+      min-height: 170px;
+      max-height: 170px;
+    }
+  }
+}
